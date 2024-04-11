@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+        const valeur = [2,4,19,9];
+        
+        async function iterateWithAsyncAwait(valeurs) {
+  for (const valeur of valeurs) {
+    
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // Attente de 1 seconde avant chaque itération
+
+    
+    console.log("valeur : ", valeur);
+  }
+  iterateWithAsyncAwait(valeurs);
+}
+
+
+
+
+    </script>
+</head>
+<body>
+    Itération avec Async/Await 
+</body>
+</html>

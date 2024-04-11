@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      
+        async function parallelCalls(urls) {
+  // Requêtes parallèles avec Promise.all()
+  const results = await Promise.all(
+    urls.map((url) => fetch(url).then((response) => response.json()))
+  );
+
+  // Enregistrement des réponses
+  console.log("Réponses : ", results);
+
+  // Traitement des réponsess
+  // ...
+
+}
+
+// Exécution de la fonction avec un exemple de tableau d'URL
+const urls = ["https://www.facebook.com/data", "https://www.google.com/data", "https://www.apple.com/data"];
+
+parallelCalls(urls);
+      
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

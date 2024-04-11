@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <script>
+        async function chainedAsyncFunctions() {
+  // Déclaration des fonctions asynchrones
+  async function firstFunction() {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log("Fonction 1 terminée");
+  }
+
+  async function secondFunction() {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log("Fonction 2 terminée");
+  }
+
+  async function thirdFunction() {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log("Fonction 3 terminée");
+  }
+
+  // Chaînage des fonctions avec await
+  await firstFunction();
+  await secondFunction();
+  await thirdFunction();
+}
+
+// Exécution de la fonction chaînée
+chainedAsyncFunctions();
+
+
+
+
+    </script>
+</head>
+<body>
+    Chaînage Async/Await 
+
+</body>
+</html>
